@@ -29,7 +29,7 @@ python-projects/
 
 | Level         | Description                              |
 |---------------|------------------------------------------|
-| Beginner      | Small CLI projects to build core skills  |
+| Beginner      | Small projects to build core skills  |
 | Intermediate  | Projects using APIs, files, logic, etc.  |
 | Advanced      | Real-world apps with AI, GUIs, web, etc. |
 
