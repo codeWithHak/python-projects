@@ -1,6 +1,7 @@
 # imports
 from random import randint
 from sys import exit
+from time import time
 
 # generate a random number
 computer_guess = randint(1,100)
@@ -50,11 +51,11 @@ while True:
                     if chances > 0:
 
                     # ask the user to guess the number and convert it to an int
+                        start_time = time()
                         user_guess = int(input("Enter your guess: "))
 
                         # check if guess is between 1 and 100 
                         if user_guess >= 1 and user_guess <= 100:
-                        
                             # now compare user guess with computer guess
                             if user_guess > computer_guess:
                                 print("Incorrect! Number is less then" ,user_guess)                               
@@ -68,11 +69,22 @@ while True:
                             # if user guess matched with computer guess break the loop                            
                             else:
                                 print("Correct! You won")
-                                exit()
+                                end_time = time()
+                                total_time = end_time - start_time
+                                print(f"You took {total_time:.2f} seconds to guess")
+                                play_again = input("Do you want to play again? (Y/N)")
+                                if play_again.lower() == "y":
+                                    break
+                                elif play_again.lower() == "n":
+                                    print("Thanks for playing, Bye!")
+                                    exit()
                         else:
                             print("Select a number between 1 to 100")
                     else:
-                        print("No chances left")
+                        print("\nYou lost! No Chances Left.")
+                        end_time = time()
+                        total_time = end_time - start_time
+                        print(f"\nYou played the game for {total_time:.2f} seconds.")
                         break
                     
                 # if user give invalid vlaue e.g str this except block will run        
