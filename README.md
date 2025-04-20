@@ -51,10 +51,14 @@ I'm building this to:
 ---
 
 ## 🛠️ Tech Stack
-- Python 3.x
+- Python 3.12.5
 - CLI
 - APIs *(coming soon)*
-- Streamlit, LangChain, Django *(planned)*
+- Streamlit *(planned)*
+- Django *(planned)*
+- FastAPI *(planned)*
+- LangChain,  *(planned)*
+- OpenAI Agents SDK,  *(planned)*
 
 ---
 
