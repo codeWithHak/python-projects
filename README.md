@@ -1,6 +1,7 @@
 # 🐍 Python Projects by Huzair
 
-Welcome to my collection of Python projects — from fun beginner games to more advanced apps using APIs, GUIs, and even AI. This repo is my journey as I level up in Python development 💻🚀
+Welcome to my collection of Python projects, from fun beginner games to more advanced apps using APIs, GUIs, and even AI.
+This repo is my journey as I level up in Python development 💻
 
 > 📅 Started on: April 20, 2025  
 > 👨‍💻 First project: [Number Guessing Game](01_beginner/01_number_guessing_game)
