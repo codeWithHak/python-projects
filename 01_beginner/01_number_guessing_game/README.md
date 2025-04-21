@@ -14,8 +14,12 @@ A command-line game where you guess a random number between 1-100 based on your 
   - Time tracking for each game session
   - Higher/lower hints to guide your guesses
   - Replay option without restarting the program
+ 
+## 🎯 Project Guidelines
 
-## 🚀 How to Run
+This number guessing game is based on the project guidelines from [Number Guessing Game](https://roadmap.sh/projects/number-guessing-game).
+
+## ⚡ How to Run
 
 Requires Python 3:
 ```bash
@@ -62,3 +66,6 @@ Do you want to play again? (Y/N)
 
 - Implement a hint system that provides clues to the user if they are stuck
 - Keep track of the user's high score (i.e., the fewest number of attempts it took to guess the number under a specific difficulty level)
+
+## 🔗 More Projects
+This project is part of my Python learning journey. View all projects at [Python Projects](https://github.com/codeWithHak/python-projects).
