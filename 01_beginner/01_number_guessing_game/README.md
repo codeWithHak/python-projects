@@ -16,7 +16,7 @@ A command-line game where you guess a random number between 1-100 based on your 
   - Replay option without restarting the program
  
 ## 🛣️ Project Guideleines
-This number guessing game is based on the project guidelines from [roadmap.sh/projects/number-guessing-game](https://roadmap.sh/projects/number-guessing-game).
+This number guessing game is based on the project guidelines from [project URL](https://roadmap.sh/projects/number-guessing-game).
  
 ## ⚡ How to Run
 
