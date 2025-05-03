@@ -10,24 +10,24 @@ st.subheader("We test wether your wings are strong enough or not!")
 
 # input that takes passowrd
 password = st.text_input(
-    
     "Check Your Passowrd's Strength",
     type="password",
     help="Type your password te see it's strength.",
     placeholder="Your Password"
-    
     )
-
 
 # function that checks password's strength
 def check_password_strength(password):
     special_characters = "!@#$%^&*"
     pass_len = len(password)
     
+    # first check if password has special characters
     if any(char in special_characters for char in password):
         
+        # then check if it has digits
         if any(char.isdigit() for char in password):
             
+            # then check length
             if pass_len >= 8:
                 st.write("✅ Strong, you are ready to fly high and safe.")
                 
@@ -39,8 +39,11 @@ def check_password_strength(password):
     else:
         st.write("❌ Weak, Include atleast one special character.")
 
+# run the method that checks password
 check_password_strength(password)
 
+
+# a method that generates strong password
 def generate_password():
     
     # initialize an empty passwod
@@ -79,8 +82,11 @@ def generate_password():
         generated_password += strings[random.randrange(strings_len)]
         
         # now we have 4 strings 2 special characters and 2 numbers, that's a pretty solid password.
-        
+    
+    # show generated password    
     st.write(generated_password)
+    
+    # custom button component to copy password to clipboard 
     components.html(f"""
                     <button
                     onclick="navigator.clipboard.writeText('{generated_password}')"
@@ -95,6 +101,7 @@ def generate_password():
                     
                     >Copy</button>""")
 
+# generate password onclick
 if st.button("Generate Strong Password"):
     generate_password()
     
