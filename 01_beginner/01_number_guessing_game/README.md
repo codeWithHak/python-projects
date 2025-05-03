@@ -1,6 +1,6 @@
 # 🎮 Number Guessing Game
 
-A command-line game where you guess a random number between 1-100 based on your chosen difficulty level. Features a timer, error handling, and replay options.
+A command-line game where you guess a random number between 1-100 based on your chosen difficulty level. Features include a timer, error handling, and replay options.
 
 ## ✨ Features
 
@@ -14,8 +14,11 @@ A command-line game where you guess a random number between 1-100 based on your 
   - Time tracking for each game session
   - Higher/lower hints to guide your guesses
   - Replay option without restarting the program
-
-## 🚀 How to Run
+ 
+## 🛣️ Project Guideleines
+This number guessing game is based on the project guidelines from [roadmap.sh/projects/number-guessing-game](https://roadmap.sh/projects/number-guessing-game).
+ 
+## ⚡ How to Run
 
 Requires Python 3:
 ```bash
@@ -49,7 +52,6 @@ You took 8.12 seconds to guess
 
 Do you want to play again? (Y/N)
 ```
-
 ## 🧠 What I Learned
 
 - Generating random values
@@ -62,3 +64,7 @@ Do you want to play again? (Y/N)
 
 - Implement a hint system that provides clues to the user if they are stuck
 - Keep track of the user's high score (i.e., the fewest number of attempts it took to guess the number under a specific difficulty level)
+
+## 🔗 More Projects
+
+This project is part of my Python learning journey. View all projects at [Python Projects](https://github.com/codeWithHak/python-projects).
