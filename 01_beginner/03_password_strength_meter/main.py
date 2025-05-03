@@ -29,10 +29,10 @@ def check_password_strength(password):
         if any(char.isdigit() for char in password):
             
             if pass_len >= 8:
-                st.write("✅ Strong")
+                st.write("✅ Strong, you are ready to fly high and safe.")
                 
             elif pass_len < 8:
-                st.write("⚠️  Medium")     
+                st.write("⚠️  Medium, Increase length.")     
             
         else:
             st.write("❌ Weak, Include atleast one number.")
@@ -82,7 +82,18 @@ def generate_password():
         
     st.write(generated_password)
     components.html(f"""
-                    <button onclick="navigator.clipboard.writeText('{generated_password}')" >Copy</button>""")
+                    <button
+                    onclick="navigator.clipboard.writeText('{generated_password}')"
+                    style="
+                        padding:0.5em 1em;
+                        color:white;
+                        border-radius:0.60em;
+                        background-color:transparent;
+                        border:1px 0px solid gray;
+                        cursor:pointer;
+                        "
+                    
+                    >Copy</button>""")
 
 if st.button("Generate Strong Password"):
     generate_password()
