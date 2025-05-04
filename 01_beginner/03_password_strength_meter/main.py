@@ -98,7 +98,6 @@ def generate_password():
                         border:1px 0px solid gray;
                         cursor:pointer;
                         "
-                    
                     >Copy</button>""")
 
 # generate password onclick
