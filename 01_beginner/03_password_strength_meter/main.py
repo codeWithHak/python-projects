@@ -40,7 +40,8 @@ def check_password_strength(password):
         st.write("❌ Weak, Include atleast one special character.")
 
 # run the method that checks password
-check_password_strength(password)
+if password:
+    check_password_strength(password)
 
 
 # a method that generates strong password
