@@ -1,0 +1,1 @@
+print("Mamu Shop")
