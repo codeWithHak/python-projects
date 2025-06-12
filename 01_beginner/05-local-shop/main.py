@@ -31,6 +31,7 @@ for item in items:
                 'quantity':user_input,
                 }
             user_cart['total'] = item['price'] * user_input
+            items['quantity'] -= user_input
             print("\nHere you go!")
             print(f"Your bill is: {user_cart}")
         else:
