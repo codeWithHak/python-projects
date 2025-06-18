@@ -1,11 +1,12 @@
 from random import randint 
-
+import os
+import json
 # a list that will store all accounts
-all_accounts = []   
+accounts_file = "accounts.json"
+
 
 # function for openieng user account
-def open_account():
-    
+def open_account():    
      
     # taking inputs from user
     acc_title = input("Set your account title: ")
@@ -22,7 +23,20 @@ def open_account():
         "acc_id":acc_id
     }
     
+ 
+    if os.path.exists(accounts_file):
+        with open(accounts_file, "r") as f:
+            all_accounts = json.load(f)
+    else:
+        all_accounts = []
+        
     all_accounts.append(account)
+    
+    with open(accounts_file, "w") as f:
+        json.dump(all_accounts, f, indent=4)
+    
+        
     print(f"Congrats {acc_title} your account has been opened successfully!")
     print(all_accounts)
+    
 open_account()

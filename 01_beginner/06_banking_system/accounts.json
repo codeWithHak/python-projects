@@ -1,0 +1,16 @@
+[
+    {
+        "acc_title": "huzair",
+        "acc_pin": "1234",
+        "monthly_income": "10000",
+        "acc_balance": "2000",
+        "acc_id": 3562
+    },
+    {
+        "acc_title": "Khizar ",
+        "acc_pin": "4321",
+        "monthly_income": "20000",
+        "acc_balance": "3000",
+        "acc_id": 9175
+    }
+]
