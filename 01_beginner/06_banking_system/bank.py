@@ -212,4 +212,32 @@ def view_all_accounts():
     for i,acc in enumerate(all_accounts):
         print(f"{i+1} - {acc}")
         
-view_all_accounts()
+
+def request_loan():
+    print("\n-- Provide Credentials Of Your Account --\n")
+    acc_title = input("Account title: ")
+    acc_pin = int(input("Account pin: "))
+
+    for acc in all_accounts:
+        if acc_title == acc["acc_title"]:
+            
+            if acc["acc_pin"] == acc_pin:
+                print(f"You monthly income is Rs.{acc["monthly_income"]}")
+                print(f"you can get the loan of Rs.{acc["monthly_income"] * 4}")
+                
+                print("0) I don't want it")
+                print("1) I want it")
+                user_input = int(input("Do yo want it? "))
+                if user_input == 1:
+                    print(f"Loan of Rs.{acc["monthly_income"] * 4} granted!")
+                    return
+                else:
+                    print("Loan cancelled!")
+                    return
+              
+            else:
+                print(f"Wrong pin you only have 2 more tries!")
+                return
+        
+    print(f"Account with title {acc_title} dosen't exist!")
+    
