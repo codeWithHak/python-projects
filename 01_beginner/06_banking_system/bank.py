@@ -131,5 +131,31 @@ def check_balance():
         
     print(f"Account with title {acc_title} dosen't exist!")
 
-check_balance()
 
+def close_account():
+    print("\n-- Provide Credentials Of Account You Want To Close --\n")
+    acc_title = input("Account title: ")
+    acc_pin = int(input("Account pin: "))
+
+    for acc in all_accounts:
+        if acc_title == acc["acc_title"]:
+            
+            if acc["acc_pin"] == acc_pin:
+                if acc["acc_balance"] > 0:
+                    print(f"Here's your balance {acc["acc_balance"]}")
+                    print(f"Bye, Thanks for being a part of Saylani Islamic Bank!")
+                    print(f"-- Account Closed --")
+                    all_accounts.remove(acc)
+                    
+                    with open(accounts_file, "w") as f:
+                        json.dump(all_accounts, f, indent=4)
+                    return
+              
+            else:
+                print(f"Wrong pin you only have 2 more tries!")
+                return
+        
+    print(f"Account with title {acc_title} dosen't exist!")
+
+
+close_account()

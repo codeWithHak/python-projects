@@ -1,31 +1,10 @@
 [
     {
-        "acc_title": "huzair",
-        "acc_pin": 123,
-        "monthly_income": 200,
-        "acc_balance": 1000000000199814444,
-        "acc_id": 2694
-    },
-    {
         "acc_title": "huzaifa",
         "acc_pin": 222,
         "monthly_income": 30000,
         "acc_balance": 1000,
         "acc_id": 8587
-    },
-    {
-        "acc_title": "khizar",
-        "acc_pin": 444,
-        "monthly_income": 244444,
-        "acc_balance": 22234444,
-        "acc_id": 5528
-    },
-    {
-        "acc_title": "abdullah",
-        "acc_pin": 123,
-        "monthly_income": 2222,
-        "acc_balance": 222222222224444477,
-        "acc_id": 3145
     },
     {
         "acc_title": "hanzla",
