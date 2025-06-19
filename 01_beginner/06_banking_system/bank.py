@@ -160,7 +160,8 @@ def close_account():
 
 
 
-def transfer_fund():
+def transfer_amount():
+
     print("\n-- Provide Credentials Of Account You Want To Transfer Money 'To' --\n")
     print("Transfer Money TO")
     to_acc_title = input("Account title: ")
@@ -204,4 +205,11 @@ def transfer_fund():
         
     print(f"Account with title {to_acc_title} dosen't exist!")
     
-transfer_fund()
+    
+    
+    
+def view_all_accounts():
+    for i,acc in enumerate(all_accounts):
+        print(f"{i+1} - {acc}")
+        
+view_all_accounts()

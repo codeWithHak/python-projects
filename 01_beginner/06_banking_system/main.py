@@ -1,4 +1,4 @@
-from bank import open_account, deposit_amount
+from bank import open_account, deposit_amount, withdraw_amount, check_balance transfer_amount, close_account
 
 print(f"\n{'-'*20} Welcome to Saylani Islamic Bank {'-'*20}\n")
 
@@ -7,6 +7,11 @@ while True:
     try:
         print("1) Open new account")
         print("2) Deposit Money in your account")
+        print("3) Withdraw Money from your account")
+        print("4) Check your current balance")
+        print("5) Transfer Money from your account to another account")
+        print("6) Close your account")
+        
         user_input = int(input(("Select any option from above: ")))
         
         if user_input == 1:
@@ -14,6 +19,14 @@ while True:
             break
             
         elif user_input == 2:
+            deposit_amount()
+            break
+        
+        elif user_input == 3:
+            deposit_amount()
+            break
+        
+        elif user_input == 4:
             deposit_amount()
             break
         
