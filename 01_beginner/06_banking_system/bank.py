@@ -2,6 +2,9 @@ from random import randint
 import os
 import json
 # a list that will store all accounts
+
+
+
 accounts_file = "accounts.json"
 
 def _read_accounts():
@@ -68,14 +71,18 @@ def deposit_amount():
 
                     with open(accounts_file, "w") as f:
                         json.dump(all_accounts, f, indent=4)
-
-                    break
+                        return
                 else:
                     print(f"Invalid amount {deposit}!")
+                    return
               
             else:
                 print(f"Wrong pin you only have 2 more tries!")
-        else:
-            print(f"Account with title {acc_title} dosen't exist!")
+                return
+        
+    print(f"Account with title {acc_title} dosen't exist!")
+            
     
+
 deposit_amount()
+
