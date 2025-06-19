@@ -55,7 +55,7 @@ def open_account():
 
 def deposit_amount():
     
-    print("\n--Provide Credentials Of Your Account--\n")
+    print("\n-- Provide Credentials Of Your Account --\n")
     acc_title = input("Account title: ")
     acc_pin = int(input("Account pin: "))
 
@@ -83,6 +83,53 @@ def deposit_amount():
     print(f"Account with title {acc_title} dosen't exist!")
             
     
+def withdraw_amount():
+    print("\n-- Provide Credentials Of Your Account --\n")
+    acc_title = input("Account title: ")
+    acc_pin = int(input("Account pin: "))
 
-deposit_amount()
+    for acc in all_accounts:
+        if acc_title == acc["acc_title"]:
+            
+            if acc["acc_pin"] == acc_pin:
+                withdraw = int(input("Amount you want to deposit: "))
+                if acc["acc_balance"] > withdraw:
+                    acc['acc_balance'] -= withdraw
+                    print(f"{withdraw} withrawn from {acc_title}")
+
+
+                    with open(accounts_file, "w") as f:
+                        json.dump(all_accounts, f, indent=4)
+                        return
+                else:
+                    print(f"Your current blance is below {withdraw}!")
+                    print("Can't withdarw!")
+                    return
+              
+            else:
+                print(f"Wrong pin you only have 2 more tries!")
+                return
+        
+    print(f"Account with title {acc_title} dosen't exist!")
+
+
+def check_balance():
+    print("\n-- Provide Credentials Of Your Account --\n")
+    acc_title = input("Account title: ")
+    acc_pin = int(input("Account pin: "))
+
+    for acc in all_accounts:
+        if acc_title == acc["acc_title"]:
+            
+            if acc["acc_pin"] == acc_pin:
+                print(f"Your current balance is {acc["acc_balance"]}")
+                return
+              
+            else:
+                print(f"Wrong pin you only have 2 more tries!")
+                return
+        
+    print(f"Account with title {acc_title} dosen't exist!")
+
+check_balance()
 
