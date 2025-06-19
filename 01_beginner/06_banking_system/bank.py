@@ -158,4 +158,50 @@ def close_account():
     print(f"Account with title {acc_title} dosen't exist!")
 
 
-close_account()
+
+
+def transfer_fund():
+    print("\n-- Provide Credentials Of Account You Want To Transfer Money 'To' --\n")
+    print("Transfer Money TO")
+    to_acc_title = input("Account title: ")
+
+    print("\n-- Provide Credentials Of Account You Want To Transfer Money 'From' --\n")
+    print("Transfer Money FROM")
+    from_acc_title = input("Account title: ")
+    from_acc_pin = int(input("Account pin: "))
+
+    for to_acc in all_accounts:
+        if to_acc_title == to_acc["acc_title"]:
+            print('TO ACCOUNT TILE MATCHED')
+                
+            for from_acc in all_accounts:
+                if from_acc_title == from_acc["acc_title"]:
+                    print('FROM ACCOUNT TITLE MATCHED')
+        
+                    if from_acc["acc_pin"] == from_acc_pin:
+                        print('FROM ACCOUNT PIN MATCHED')
+                        amount = int(input("Amount you want to transfer: "))
+                        
+                        if amount > from_acc["acc_balance"]:
+                            print(f"{from_acc["acc_title"]} dosen't have sufficient balance.")
+                            print(f"{from_acc["acc_title"]}'s current balance is {from_acc["acc_balance"]}")
+                            return
+                        
+                        else:
+                            to_acc["acc_balance"] += amount
+                            from_acc["acc_balance"] -= amount
+                            print(f"{amount} transfered to {to_acc["acc_title"]} from {from_acc["acc_title"]}")
+                            print(f"{amount} reduced from {from_acc["acc_title"]}'s balance")
+                            with open(accounts_file, "w") as f:
+                                json.dump(all_accounts, f, indent=4)
+                            return
+                    else:
+                        print(f"You're sending money from {from_acc["acc_title"]} but the pin of is wrong!")
+                        return    
+                else:
+                    print(f"Account with title {from_acc["acc_title"]} dosen't exist!")
+                    return
+        
+    print(f"Account with title {to_acc_title} dosen't exist!")
+    
+transfer_fund()

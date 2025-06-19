@@ -3,14 +3,14 @@
         "acc_title": "huzaifa",
         "acc_pin": 222,
         "monthly_income": 30000,
-        "acc_balance": 1000,
+        "acc_balance": 39000,
         "acc_id": 8587
     },
     {
         "acc_title": "hanzla",
         "acc_pin": 123,
         "monthly_income": 22222,
-        "acc_balance": 3333,
+        "acc_balance": -14667,
         "acc_id": 8030
     }
 ]
